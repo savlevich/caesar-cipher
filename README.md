@@ -14,7 +14,9 @@ CLI tool accept 4 options (short alias and full name):
 1. **-a, --action**: an action encode/decode **(required)**
 2.  **-s, --shift**: a shift number **(required)**
 3.  **-i, --input**: an input file
+If the input file is missed - stdin will use as an input source.
 4.  **-o, --output**: an output file
+If the output file is missed - stdout will use as an input source.
 
 
 **Usage example:**

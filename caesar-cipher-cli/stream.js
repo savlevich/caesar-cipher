@@ -40,7 +40,7 @@ const createReadStream = () => new Promise(resolve => {
 				}
       );
     } else {
-      console.log('Press CTRL + C to finish procces');
+      console.log('Please enter a string and press enter. to exit the process press CTRL + C');
       resolve(process.stdin);
     }
 });
