@@ -19,7 +19,7 @@ If the input file is missed - stdin will use as an input source.
 If the output file is missed - stdout will use as an input source.
 
 
-**Usage example:**
+# Usage example
 
 ```bash
 node caesar-cipher-cli -a encode -s 7 -i "./input.txt" -o "./output.txt"
@@ -31,6 +31,12 @@ node caesar-cipher-cli --action encode --shift 7 --input input.txt --output outp
 
 ```bash
 node caesar-cipher-cli --action decode --shift 7 --input output.txt --output input.txt
+```
+
+also can be used with absolute paths (example for macOS)
+
+```bash
+node caesar-cipher-cli --action encode --shift 7 --input "/Users/admin/Documents/courses/rs/node.js/caesar-cipher-cli/input.txt" --output "/Users/admin/Documents/courses/rs/node.js/caesar-cipher-cli/output.txt"
 ```
 
 > input.txt
