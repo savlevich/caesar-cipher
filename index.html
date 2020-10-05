@@ -1,0 +1,43 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Document</title>
+  <script src="./caesar-cli.js"></script>
+</head>
+<body>
+  <label for="shift-number">shift:</label>
+  <input value="7" name="Shift" id="shift-number" type="number">
+  <label for="text">text:</label>
+  <input value='This is secret. Message about "_" symbol!' name="Text" id="text" type="text">
+  <button id="encrypt">Encrypt</button>
+  <button id="decrypt">Decrypt</button>
+  <div id="result">This is secret. Message about "_" symbol!</div>
+
+  <script>
+    const shift = document.getElementById('shift-number');
+    const text = document.getElementById('text');
+    const result = document.getElementById('result');
+    const encrypt = document.getElementById('encrypt');
+    const decrypt = document.getElementById('decrypt');
+
+    encrypt.onclick = (e) => {
+      e.preventDefault();
+      const encryptText = encryptHandler({ text: text.value, shift: Number(shift.value) });
+      result.innerHTML = encryptText;
+    };
+
+
+    decrypt.onclick = (e) => {
+      e.preventDefault();
+      console.dir(result);
+      const decrypttText = decryptHandler({ text: result.innerText, shift: Number(shift.value) });
+      result.innerHTML = decrypttText;
+      
+      console.log(decrypttText);
+    };
+
+  </script>
+</body>
+</html>
